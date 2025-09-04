@@ -9,7 +9,13 @@
 	"compatibility_date": "2025-09-04",
 	"observability": {
 		"enabled": true
-	}
+	},
+	"kv_namespaces": [
+		{
+			"binding": "COURSES",
+			"id": "215ce123b447471d86a4e17b80cf2a02"
+		}
+	],
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
@@ -25,7 +31,12 @@
 	 * Environment Variables
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
 	 */
-	// "vars": { "MY_VARIABLE": "production_value" }
+	"vars": {
+		"MY_VARIABLE": "production_value",
+		"ERC1155_ADDRESS": "0x2C4df61d4c9761422Af7D1eF07023896128a42ad",
+		"RPC_URL": "https://sepolia.infura.io/v3/edb68ba45f804ca69f13448836abe647",
+		"SECRET": "e0050176f8e16b749dd66c2a705b17e159e5f88b5ba59f7eb2477439317ee2b9",
+	}
 	/**
 	 * Note: Use secrets to store sensitive data.
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
