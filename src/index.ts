@@ -77,6 +77,7 @@ async function check1155Holding(env: Env, owner: `0x${string}`, courseId: number
 	const bal: bigint = await erc1155.balanceOf(owner, courseId);
 	return bal > 0n;
 }
+
 async function verifyPersonalSign(message: string, signature: `0x${string}`): Promise<string> {
 	const recovered = ethers.verifyMessage(message, signature);
 	return ethers.getAddress(recovered);
